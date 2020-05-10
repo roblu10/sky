@@ -1,0 +1,13 @@
+## YAML Templates
+---
+
+default: -p pretty -p prod -p chrome -p html
+pretty: --format pretty
+progress: --format progress
+homolog: ENVIRONMENT=homolog
+prod: ENVIRONMENT=prod
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
+firefox: BROWSER=firefox
+firefox_headless: BROWSER=firefox_headless
+html: --format html --out=reports/report<%= Time.now.strftime("%Y%m%d-%H%M%S") %>.html
